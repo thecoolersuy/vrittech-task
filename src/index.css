@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import url('https://googleapis.com');
+
+@font-face {
+    font-family:"Nohemi";
+    src: url('./assets/fonts/Nohemi-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@theme {
+  --font-outfit: "Outfit", Helvetica, serif;
+  --font-nunito: "Nunito", serif;
+  --font-nohemi: "Nohemi", serif;
+}
