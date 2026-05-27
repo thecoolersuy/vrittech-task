@@ -18,14 +18,14 @@ export default function CourseCard({ course, isActivated, onClick }) {
         backgroundColor: { duration: 0.35 },
       }}
       className="rounded-3xl cursor-pointer overflow-hidden relative"
-      style={{ minWidth: 0, minHeight: "320px" }}
+      style={{ minWidth: 0, minHeight: "500px" }}
     >
       <AnimatePresence>
         //when the card is not clicked
         {!isActivated && (
           <motion.div
             key="notactivated"
-            className="absolute inset-0 flex flex-col items-center gap-8 justify-between p-10 h-full"
+            className="absolute inset-0 flex flex-col items-center gap-8 justify-between py-20 h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.25 } }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
@@ -40,15 +40,15 @@ export default function CourseCard({ course, isActivated, onClick }) {
               <span className="text-[#c33241] font-bold text-[32px] font-outfit leading-tight">
                 {course.title}
               </span>
-              <span className="text-[#c33241] font-normal text-[18px] font-outfit leading-snug">
+              <span className="text-[#c33241] font-regular text-[18px] font-outfit leading-snug">
                 {course.description}
               </span>
             </div>
             <div className="flex items-end leading-none">
-              <span className="text-[#c33241] font-bold font-nohemi text-[120px] leading-none">
+              <span className="text-[#c33241] font-bold font-nohemi text-[150px] leading-none">
                 {course.number}
               </span>
-              <span className="text-[#c33241] font-bold text-[56px] font-nohemi mb-2">
+              <span className="text-[#c33241] font-bold text-[64px] font-nohemi mb-25">
                 +
               </span>
             </div>
@@ -66,16 +66,16 @@ export default function CourseCard({ course, isActivated, onClick }) {
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
           >
             <div className="flex justify-end font-outfit">
-              <a className="text-[#F9EBEC] font-outfit text-[18px] items-center gap-2  flex">
+              <a className="text-[#F9EBEC] font-outfit  font-semibold text-[18px] items-center gap-2  flex">
                 View all Courses
                 <img src={arrow} alt="Arrow" />
               </a>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-10 justify-center items-center">
               {stickers.map((sticker) => (
                 <div
                   key={sticker.id}
-                  className="w-16 h-16"
+                  className="w-20 h-20"
                   style={{ transform: `rotate(${sticker.rotation}deg)` }}
                 >
                   <img
@@ -90,7 +90,9 @@ export default function CourseCard({ course, isActivated, onClick }) {
               <span className="text-white font-black leading-none font-nohemi text-[150px]">
                 {course.number}
               </span>
-              <span className="text-white font-black text-4xl mb-4">+</span>
+              <span className="text-white font-black text-[64px] font-nohemi mb-20">
+                +
+              </span>
 
               <div className="flex flex-col gap-1 pb-2 ml-3">
                 <span className="text-white font-bold text-[32px] leading-tight font-nohemi">

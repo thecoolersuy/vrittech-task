@@ -1,7 +1,5 @@
 import React from "react";
 
-function JourneyPage() {
-  return <div>JourneyPage</div>;
+export default function JourneyPage() {
+  return <h1>Journey Page</h1>;
 }
-
-export default JourneyPage;

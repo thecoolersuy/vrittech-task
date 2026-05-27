@@ -1,5 +1,23 @@
 @import "tailwindcss";
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&family=Nunito:wght@400;600;700;900&display=swap');
+
+@font-face {
+    font-family: "Outfit-bold";
+    src: url('./assets/fonts/Outfit-Bold.ttf') format('truetype');
+    font-weight: 400 900;
+}
+
+@font-face {
+    font-family: "Outfit-semibold";
+    src: url('./assets/fonts/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 400 900;
+}
+
+@font-face {
+    font-family: "Outfit-regular";
+    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400 900;
+}
 
 @font-face {
     font-family:"Nohemi";
@@ -9,7 +27,8 @@
 }
 
 @theme {
-  --font-outfit: "Outfit", Helvetica, serif;
-  --font-nunito: "Nunito", serif;
-  --font-nohemi: "Nohemi", serif;
+  --font-outfitbold: "Outfit-bold", "Nohemi";
+  --font-outfitsemibold: "Outfit-semibold", "Nohemi";
+  --font-outfitregular: "Outfit-regular", "Nohemi";
+  --font-nohemi: "Nohemi", serif;  
 }

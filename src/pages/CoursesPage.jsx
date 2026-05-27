@@ -5,9 +5,9 @@ function CoursesPage() {
   return (
     <>
       <div className="min-h-screen w-full bg-[#FFFFFF]">
-        <div className="max-w-[1440px] mx-auto px-20 py-10 flex flex-col gap-6">
+        <div className="max-w-[1440px] mx-auto px-20 py-12 flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <p className=" text-[#414141] text-[24px] font-outfit font-regular ">
+            <p className=" text-[#414141] text-[24px] font-outfitregular ">
               Explore our classes and master trending skills!
             </p>
             <h1 className="text-[#2B2B2B] font-bold font-nohemi text-[32px]">
