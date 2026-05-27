@@ -40,8 +40,8 @@ export const stickers = [
   },
   {
     id: 3,
-    src: "../../../public/icons/colorpicker.jpg",
-    alt: "colorpicker",
+    src: "../../../public/icons/typescript.jpg",
+    alt: "typescript",
     rotation: 7,
   },
 ];

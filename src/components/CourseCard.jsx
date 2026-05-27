@@ -9,8 +9,8 @@ export default function CourseCard({ course, isActivated, onClick }) {
       layout
       onClick={onClick}
       animate={{
-        flex: isActive ? 3 : 1,
-        backgroundColor: isActive ? "#c33241" : "#f9ebec",
+        flex: isActivated ? 2 : 1,
+        backgroundColor: isActivated ? "#c33241" : "#f9ebec",
       }}
       transition={{
         layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
@@ -25,14 +25,17 @@ export default function CourseCard({ course, isActivated, onClick }) {
         {!isActivated && (
           <motion.div
             key="notactivated"
-            className="absolute inset-0 flex flex-col justify-between p-6"
+            className="absolute inset-0 flex flex-col items-center gap-8 justify-between p-10 h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.25 } }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
           >
             <div
-              style={{ witingMode: "vertical-rl", transform: "rotate(180deg)" }}
-              className="flex flex-row gap-3 items-start mt-2 flex-1"
+              className="flex flex-col gap-3 items-start"
+              style={{
+                writingMode: "vertical-rl",
+                transform: "rotate(180deg)",
+              }}
             >
               <span className="text-[#c33241] font-bold text-[32px] font-outfit leading-tight">
                 {course.title}
@@ -41,11 +44,11 @@ export default function CourseCard({ course, isActivated, onClick }) {
                 {course.description}
               </span>
             </div>
-            <div className="flex items-end leading-none mt-4">
-              <span className="text-[#c33241] font-bold font-nohemi text-[150px] leading-none">
+            <div className="flex items-end leading-none">
+              <span className="text-[#c33241] font-bold font-nohemi text-[120px] leading-none">
                 {course.number}
               </span>
-              <span className="text-[#c33241] font-bold text-[64px] font-nohemi mb-2">
+              <span className="text-[#c33241] font-bold text-[56px] font-nohemi mb-2">
                 +
               </span>
             </div>
@@ -54,7 +57,7 @@ export default function CourseCard({ course, isActivated, onClick }) {
       </AnimatePresence>
       <AnimatePresence>
         //when the card is clicked
-        {isActive && (
+        {isActivated && (
           <motion.div
             key="activated"
             className="absolute inset-0  flex flex-col justify-between p-8"
@@ -62,8 +65,8 @@ export default function CourseCard({ course, isActivated, onClick }) {
             animate={{ opacity: 1, transition: { delay: 0.3 } }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
           >
-            <div className="flex justify-end">
-              <a className="text-[#F9EBEC] font-outfit font-[18px] font-semibold items-center gap-2 ">
+            <div className="flex justify-end font-outfit">
+              <a className="text-[#F9EBEC] font-outfit text-[18px] items-center gap-2  flex">
                 View all Courses
                 <img src={arrow} alt="Arrow" />
               </a>
@@ -72,32 +75,29 @@ export default function CourseCard({ course, isActivated, onClick }) {
               {stickers.map((sticker) => (
                 <div
                   key={sticker.id}
-                  className="w-16 h-16 rounded-2xl"
+                  className="w-16 h-16"
                   style={{ transform: `rotate(${sticker.rotation}deg)` }}
                 >
                   <img
                     src={sticker.src}
                     alt={sticker.alt}
-                    className="w-full h0full object-cover"
+                    className="w-full h-full object-cover border-none rounded-[10px]"
                   />
                 </div>
               ))}
             </div>
-            <div className="flex items-end gap-1">
-              <span
-                className="text-white font-black leading-none"
-                style={{ fontSize: "clamp(64px, 8vw, 96px)" }}
-              >
-                {course.num}
+            <div className="flex items-end gap-1 ">
+              <span className="text-white font-black leading-none font-nohemi text-[150px]">
+                {course.number}
               </span>
               <span className="text-white font-black text-4xl mb-4">+</span>
 
               <div className="flex flex-col gap-1 pb-2 ml-3">
-                <span className="text-white font-black text-2xl leading-tight">
+                <span className="text-white font-bold text-[32px] leading-tight font-nohemi">
                   {course.title}
                 </span>
-                <span className="text-white/80 text-sm font-medium leading-relaxed max-w-[220px]">
-                  {course.desc}
+                <span className="text-white/80 text-[18px] font-regular  leading-relaxed max-w-[220px] font-outfit">
+                  {course.description}
                 </span>
               </div>
             </div>
