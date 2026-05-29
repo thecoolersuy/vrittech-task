@@ -22,25 +22,25 @@ export const courses = [
 export const stickers = [
   {
     id: 0,
-    src: "../../../public/icons/react.jpg",
+    src: "/icons/react.jpg",
     alt: "react",
     rotation: -8,
   },
   {
     id: 1,
-    src: "../../../public/icons/angular.jpg",
+    src: "/icons/angular.jpg",
     alt: "angular",
     rotation: 5,
   },
   {
     id: 2,
-    src: "../../../public/icons/vue.jpg",
+    src: "/icons/vue.jpg",
     alt: "vue",
     rotation: -4,
   },
   {
     id: 3,
-    src: "../../../public/icons/typescript.jpg",
+    src: "/icons/typescript.jpg",
     alt: "typescript",
     rotation: 7,
   },

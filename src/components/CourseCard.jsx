@@ -1,7 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { stickers } from "../data/constants";
-import arrow from "../../public/icons/arrow.svg";
+
+const arrow = "/icons/arrow.svg";
 
 export default function CourseCard({ course, isActivated, onClick }) {
   return (
